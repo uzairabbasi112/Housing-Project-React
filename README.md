@@ -15,17 +15,17 @@ This project is a platform for **buying and selling homes**. It allows users to 
 ## 🖼️ Screenshots
 
 ### 🏠 Home Page
-![Home Page Screenshot](path_to_your_image/home_page_image.png)
+![Home Page Screenshot](images/home.png)
 
 The **Home Page** displays a list of properties for sale, each with a title, price, and image.
 
 ### 📋 Details Page
-![Details Page Screenshot](path_to_your_image/details_page_image.png)
+![Details Page Screenshot](images/detail.png)
 
 The **Details Page** shows more detailed information about a property, including high-resolution images and in-depth descriptions.
 
 ### 🛒 Cart Page
-![Cart Page Screenshot](path_to_your_image/cart_page_image.png)
+![Cart Page Screenshot](images/cart.png)
 
 The **Cart Page** allows users to review and manage their selected properties, with the option to proceed to purchase.
 
