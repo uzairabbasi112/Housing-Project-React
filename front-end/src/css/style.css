@@ -1,0 +1,205 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    height: 100vh;
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Black overlay with transparency */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero a {
+    text-decoration: none;
+    background-color: #f76c6c;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.hero a:hover {
+    background-color: #ff4c4c;
+}
+
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 80px;
+background-color: #333;
+padding: 0 20px;
+position: relative;
+}
+
+.logo {
+color: white;
+font-size: 2rem;
+text-transform: uppercase;
+letter-spacing: 2px;
+}
+
+.nav-links {
+list-style: none;
+display: flex;
+}
+
+.nav-links li {
+margin: 0 20px;
+}
+
+.nav-links li a {
+text-decoration: none;
+color: white;
+font-size: 1.2rem;
+transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+color: #f76c6c;
+}
+
+/* Mobile Styles */
+.mobile-menu-icon {
+display: none;
+color: white;
+font-size: 2rem;
+cursor: pointer;
+}
+
+.nav-links-mobile {
+display: none;
+flex-direction: column;
+align-items: center;
+position: absolute;
+top: 80px;
+left: 0;
+width: 100%;
+background-color: #333;
+}
+
+.nav-links-mobile li {
+margin: 10px 0;
+}
+
+/* Button Styling */
+.btn-signup {
+background-color: #f76c6c;
+color: white;
+padding: 10px 20px;
+border-radius: 5px;
+text-decoration: none;
+}
+
+.btn-signup:hover {
+background-color: #ff4c4c;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+.nav-links {
+    display: none;
+}
+
+.mobile-menu-icon {
+    display: block;
+}
+
+.nav-links-mobile {
+    display: flex;
+}
+}
+
+
+
+
+/* General Card Styling */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .card-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  .card-btn {
+    text-decoration: none;
+    background-color: #f76c6c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+  }
+  
+  .card-btn:hover {
+    background-color: #ff4c4c;
+  }
+  

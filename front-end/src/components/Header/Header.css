@@ -1,0 +1,434 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search-bar button {
+    background-color: #007bff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+#search-btn{
+    position: absolute;
+    top: -5px;
+    left: 580px;
+    background-color: rgba(255, 255, 255, 0);
+    color: green;
+}
+
+#cart{
+    color: red;
+    background-color: rgba(243, 243, 243, 0);
+    height: 40px;
+    padding: 0px;
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+.suggestions {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    overflow: hidden;
+}
+
+.suggestion-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+.suggestion-logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+.profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+
+/* sub header designing  */
+.sub-header {
+    display: flex;
+    align-items: center;
+    background-color: #007bff00;
+    padding: 10px 20px;
+    color: black;
+    font-weight: 700;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.all-categories {
+    width: 15%;
+}
+
+.categories-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    background-color: #15a3f0d1;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+
+
+.categories-button:hover {
+    background-color: #003f7f;
+}
+
+.menu-items {
+    width: 85%;
+}
+
+.menu-items ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-items li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.menu-items li:hover {
+    color: #e0e0e0;
+}
+
+@media (max-width: 550px) {
+    .categories-button {
+        font-size: 10px; /* Reduce button font size */
+        padding: 6px 10px; /* Reduce padding */
+    }
+
+    .menu-items ul {
+        gap: 8px; /* Reduce space between menu items */
+    }
+
+    .menu-items li {
+        font-size: 8px; /* Reduce font size */
+        font-weight: 400; /* Lighten the font weight */
+    }
+
+    .menu-items li svg {
+        width: 12px; /* Reduce icon size */
+        height: 12px;
+    }
+}
+/* Popup and Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Transparent black */
+    z-index: 100; /* Ensure it stays on top */
+}
+
+.center-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 200; /* Ensure it stays above the overlay */
+    color: #333;
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+}
+
+
+.center-popup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.center-popup li {
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* text-align: center; */
+}
+
+.center-popup li:hover {
+    background-color: #f0f0f0;
+}
+@media (max-width: 950px) {
+    .menu-items ul {
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 10px; 
+    }
+
+    .menu-items li {
+        flex: 1 1 calc(25% - 10px); 
+        max-width: calc(25% - 10px); 
+        text-align: center;
+    }
+}
+
+/* styping of the popup of sub_header  */
+.sub-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f8f8f8;
+}
+
+.categories-button {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menu-items ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.menu-items ul li {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.post-product-button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+}
+
+.center-popup,
+.post-product-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80vw;
+    height: 80vh;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.post-product-popup form {
+    /* display: flex;
+    flex-direction: column; */
+    gap: 15px;
+}
+
+.post-product-popup form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-product-popup label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.image-upload-container {
+    display: grid !important;
+    grid-template-columns: 15% 15% 15% 15% 15%;
+    gap: 15px;
+    overflow-x: auto; 
+    white-space: nowrap;
+    margin-top: 10px;
+}
+
+.upload-box {
+    width: 120px;
+    height: 120px;
+    border: 2px dashed #007bff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0; /* Prevent boxes from shrinking */
+}
+
+.upload-placeholder {
+    color: #007bff;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.upload-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.file-input {
+    display: none;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.post-product-popup input[type="text"],
+.post-product-popup input[type="file"],
+.post-product-popup textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus styling */
+.post-product-popup input[type="text"]:focus,
+.post-product-popup textarea:focus,
+.upload-box input[type="file"]:focus {
+    border-color: #007bff;
+}
+
+/* Button Styling */
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="submit"] {
+    margin-top: 10px;
+}
