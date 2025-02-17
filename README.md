@@ -37,6 +37,7 @@ The **Cart Page** allows users to review and manage their selected properties, w
 3. **Cart Page**: Users can add properties to their cart and proceed with the purchase.
 4. **Checkout**: Once ready, users can finalize their purchase from the cart.
 
+Make sure that both the front-end and back-end folders contain only the code files of project. but to run this, you have to install the node-modules in order to run it. in frontend, install node modules of react and in backend install node modules of express.js.
 ---
 
 ## 🛠️ Technologies Used
